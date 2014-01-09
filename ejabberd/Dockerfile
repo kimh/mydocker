@@ -43,5 +43,5 @@ RUN apt-get install -y sudo && echo "ejabberd ALL=(ALL) NOPASSWD: /sbin/ejabberd
 USER ejabberd
 
 # Add admin user
-RUN sudo -u ejabberd ejabberdctl start && sleep 3 && ejabberdctl register admin localhost password && whoami
+RUN sudo -u ejabberd ejabberdctl start && sleep 3 && ejabberdctl register admin localhost password && sleep 2
 #CMD ejabberdctl start && tail -f
